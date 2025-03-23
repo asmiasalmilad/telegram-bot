@@ -10,3 +10,14 @@ services:
         sync: false
       - key: WEBHOOK_URL
         sync: false
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn main:app"
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: REMOVE_BG_API_KEY
+        sync: false
