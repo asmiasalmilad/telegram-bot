@@ -1,5 +1,6 @@
 from flask import Flask, request
-from remove_bg import RemoveBg
+from rembg import remove
+
 from telegram import Bot, Update
 from telegram.ext import CommandHandler, MessageHandler, Filters, Updater
 import os
