@@ -1,1 +1,5 @@
 pyTelegramBotAPI
+flask
+remove-bg
+gunicorn
+python-telegram-bot
